@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Track = props => {
+const Track = (props) => {
   const { track } = props;
 
   return (
