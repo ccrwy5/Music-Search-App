@@ -30,7 +30,7 @@ class Lyrics extends Component {
 
   render() {
     const { track, lyrics } = this.state;
-
+    console.log(track)
     if (
       track === undefined ||
       lyrics === undefined ||
@@ -45,11 +45,24 @@ class Lyrics extends Component {
             Go Back
           </Link>
           <div className="card">
-            <div className="card-header">
+            <h5 className="card-header">
               {track.track_name} by{" "}
               <span className="text-secondary">{track.artist_name}</span>
+            </h5>
+            <div className="card-body">
+              <p className="card-text">{lyrics.lyrics_body}</p>
             </div>
           </div>
+
+          <ul className="list-group mt-3">
+            <li className="list-group-item">
+              <strong>Album ID</strong>: {track.album_id}
+            </li>
+            <li className="list-group-item">
+              <strong>Explicit Words</strong>: {track.explicit === 0 ? 'No' : 'Yes'}
+            </li>
+          </ul>
+          
         </React.Fragment>
       );
     }
