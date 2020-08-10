@@ -54,7 +54,7 @@ class Lyrics extends Component {
             </div>
           </div>
 
-          <ul className="list-group mt-3">
+          <ul className="list-group mb-3">
             <li className="list-group-item">
               <strong>Album ID</strong>: {track.album_id}
             </li>
